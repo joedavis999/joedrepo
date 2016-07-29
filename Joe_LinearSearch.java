@@ -1,3 +1,4 @@
+   //Java Program to Implement search
 import java.util.Scanner;
  
 class Joe_LinearSearch 
@@ -37,12 +38,22 @@ while (!in.hasNextInt())
       if (array[c] == search)     /* Searching element is present */
       {
          System.out.println(search + " is present at location " + (c + 1) + ".");
-          break;
+System.out.println(" Do you want to continue (Y/N) ");
+                if("N".equalsIgnoreCase(in.next().trim()))
+                {
+                    System.exit(0);
+                }  
       }
    }
-   if (c == n)  /* Searching element is absent */
+   if (c == n){  /* Searching element is absent */
       System.out.println(search + " is not present in array.");
-success=true;
+System.out.println(" Do you want to continue (Y/N) ");
+                if("N".equalsIgnoreCase(in.next().trim()))
+                {
+                    success=true;
+                }
+}
+
   }catch(Exception e){
 System.out.println("Enter valid number");
 }
